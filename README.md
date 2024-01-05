@@ -16,6 +16,8 @@ As base de dados necessárias aqui ou i. estão disponibilizadas neste repositó
 - Estatísticas de comércio Exterior - Disponibilizados pelo Ministério de Desenvolvimento, Indústria, Comércio e Serviços (MDIC), esta base de dados (disponível [aqui](https://www.gov.br/mdic/pt-br/assuntos/comercio-exterior/estatisticas/base-de-dados-bruta)). Elas estão organizadas de duas formas, sendo uma das bases sendo detalhados pelo NCM ou pelo
     Município da empresa exportadora/importadora;
 
+- Censo 2022 - para os dados de população, foram utilizadas os primeiros dados de população do Censo de 2022, podendo ser acessadas [aqui](https://www.ibge.gov.br/estatisticas/sociais/trabalho/22827-censo-demografico-2022.html);
+
 - Finanças Municipais (FINBRA) - disponibilizada pelo Tesouro Nacional através do Sistema de Informações Contábeis e Fiscais do Setor Público Brasileiro (Siconfi), estes bancos 
     dados contém as receitas e despesas de cada município brasileiro, divididas por sua função orçamentária (mais [aqui](https://portaldatransparencia.gov.br/pagina-interna/603317-funcao-e-subfuncao)). Os dados de despesas podem ser obtidos [aqui](https://siconfi.tesouro.gov.br/siconfi/pages/public/conteudo/conteudo.jsf);
 
