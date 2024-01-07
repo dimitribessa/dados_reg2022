@@ -57,6 +57,19 @@
 
  expo_scn_mun <- aggregate(VL_FOB ~ Código.Produto, data = expo, FUN = sum)
  
+ #exportação por mesorregiuão + código SCN
  expo_meso <- aggregate(VL_FOB ~ Nome_Mesorregião + Código.Produto, data = expo, FUN = sum)
  expo_meso <- tidyr::spread(expo_meso, key = Nome_Mesorregião, value = VL_FOB) 
  
+ #exportação por mesorregiuão + código SCN
+ expo_meso_sh4 <- aggregate(VL_FOB ~ Nome_Mesorregião + SH4, data = expo, FUN = sum)
+ expo_meso_sh4 <- tidyr::spread(expo_meso_sh4, key = Nome_Mesorregião, value = VL_FOB) 
+
+ #lendo códigos sh4
+ sh4_nomenc <- openxlsx::read.xlsx('./tradutores_editados/TABELAS_AUXILIARES.xlsx', sheet = 2) %>%
+                .[!duplicated(sh4_nomenc[,1]),7:8]
+ sh4_nomenc[,1] <- as.numeric(sh4_nomenc[,1]) #transformando em variável numérica
+
+
+ expo_meso_sh4 <- dplyr::left_join(expo_meso_sh4, sh4_nomenc, by = c('SH4' = 'CO_SH4')) %>%
+                    .[,c(1,8,2:7)]
