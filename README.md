@@ -22,3 +22,20 @@ As base de dados necessárias aqui ou i. estão disponibilizadas neste repositó
     dados contém as receitas e despesas de cada município brasileiro, divididas por sua função orçamentária (mais [aqui](https://portaldatransparencia.gov.br/pagina-interna/603317-funcao-e-subfuncao)). Os dados de despesas podem ser obtidos [aqui](https://siconfi.tesouro.gov.br/siconfi/pages/public/conteudo/conteudo.jsf);
 
 - Pesquisa Nacional de Amostras de Domicílio Contínua (PnadC): Os dados aqui foram obtidos diretamente do ftp do IBGE, utilizando o pacote 'PNADcIBGE'.
+
+## Scripts
+
+Cada script disponibilizado aqui tem uma finalidade diferente, sendo divididas principalmente pela base de dados que se utiliza. Com excessão do *script_expo_sh4.R*, todos os outros
+podem ser rodados independentemente.
+
+- _pnad.R_: Aqui a finalidade é obter o rendimento das famílias pela posição da ocupação;
+
+- *script_gastos.R*: A partir dos dados do Finbra, calcula-se os gastos liquidados nas funções de Saúde e Educação, agrupando por mesorregiões;
+
+- *script_populacao.R*: Obter o total e a proporção da população do estado de Santa Catarina, dividida por sua mesorregião;
+
+- *script_expo_ncm.R*: Obter o valor das exportações catarinense, categorizando pelos códigos do Sistema de Contas Nacionais;
+
+- *script_expo_sh4.R*: Obter o valor das exportações catarinense, a partir dos dados do município da empresa exportadora, e categorizá-lo por SCN e mesorregiões.
+Tem-se uma ressalva: o dicionário de dados teve que ser adaptado aos códigos SH4 a partir da categorização de NCM>>SCN. Em vista a simplificação, houve caso de conflitos de códigos e para sanar, utilizou aquele de maior valor exportado.
+
